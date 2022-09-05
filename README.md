@@ -11,7 +11,7 @@ Terminal and the Unix Terminal in Linux, as well as some other commands I made u
 
 ## Dependencies
 
-I created my own small module called CustomFont for this project, so I can keep it free of useless third party modules. It is used
+I created my own small module called [CustomFont](https://github.com/lubnc4261/Incite-Terminal/blob/main/imports/CustomFont.py) for this project, so I can keep it free of useless third party modules. It is used
 for the color in the terminal
 All Dependencies are in [the requirements file](https://github.com/lubnc4261/Incite-Terminal/blob/main/requirements)
 ## Path of developement
