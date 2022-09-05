@@ -7,7 +7,7 @@
 Incite Terminal is a python only Command Line Terminal that is made for Windows which supports the most known Commands from the Windows
 Terminal and the Unix Terminal in Linux, as well as some other commands I made up by myself.
 
-![showcase](link-repository)
+![showcase](https://github.com/lubnc4261/Incite-Terminal/blob/main/images/showcase.png)
 
 ## Dependencies
 
@@ -25,7 +25,7 @@ for
 this subject, so the first program was just written in a single file that checked within if conditions what command should be run. 
 We can all agree on that this way of checking the user's input and then decide on what to do can only be temporary.
 After some time and motivation since I stopped
-working on it, I decided to rewrite the whole program that as we know was just a single file with about ![1000 lines](link).
+working on it, I decided to rewrite the whole program that as we know was just a single file with about 1000 lines![1000 lines](https://github.com/lubnc4261/Incite-Terminal/blob/main/images/incite%20old%20lines.png).
 I began to think about how I could make the program more advanced and not just letting it stay in the current form. 
 
 ### Rewrite
