@@ -31,22 +31,22 @@ I began to think about how I could make the program more advanced and not just l
 ### Rewrite
 
 After some brainstorming, the Terminal from Linux came to my mind, where the commands are stored in their own location in the
-/urs/bin folder. I decided to also store my commands like that in a folder, but mine is called /lib. The only problem at this point
+/urs/bin folder. I decided to also store my commands like that in a folder, but mine is called [/lib](https://github.com/lubnc4261/Incite-Terminal/blob/main/lib/__init__.py). The only problem at this point
 was: **How do i use methods from other files that can have multiple or no parameters ?**. After some research and testings I found
 a way that works just fine.
 
 ### How does it work ?
 
-We have the launch script that is called incite.py, this script imports all the methods existing from the /lib folder that have been
+We have the launch script that is called incite.py, this script [imports all the methods](https://github.com/lubnc4261/Incite-Terminal/blob/f24e921fd08f96e38acd886cee75c75bc9824190/incite.py#L15) existing from the /lib folder that have been
 Manually added by calling 
 ```python
 from lib.info import info 
 ```
 
 this will go to the /lib folder and the file  info and then import the method info, note that i coded it that the file and the method
-have to be called the same. After all these import lines have been called, the script starts with the **main()** method. This method
-will draw the "welcoming screen" of the program and then the method **commandinput()**. At this point, the user can enter the command
-he wishes to use. Let's use the show command as an example. The user sends the input show, which will be passed to the **commandRunner(command)**
+have to be called the same. After all these import lines have been called, the script starts with the **[main()](https://github.com/lubnc4261/Incite-Terminal/blob/f24e921fd08f96e38acd886cee75c75bc9824190/incite.py#L110)** method. This method
+will draw the "welcoming screen" of the program and then the method **[commandinput()](https://github.com/lubnc4261/Incite-Terminal/blob/f24e921fd08f96e38acd886cee75c75bc9824190/incite.py#L155)**. At this point, the user can enter the command
+he wishes to use. Let's use the [show](https://github.com/lubnc4261/Incite-Terminal/blob/main/lib/show.py) command as an example. The user sends the input show, which will be passed to the **[commandRunner(command)](https://github.com/lubnc4261/Incite-Terminal/blob/f24e921fd08f96e38acd886cee75c75bc9824190/incite.py#L70)**
 method. The most important part here is the splitting of the user input at spaces so that we can work with them later in the show method. Now 
 it will check if the command is even existing by checking if there is a file with the same name as the command in the /lib folder.
 After this is completed, and we can go on since show is a valid command it will be checked how much parameters are given so that
@@ -64,8 +64,8 @@ thought about how to implement a Manual for each command. Since I got the idea o
 stea.. *cought* getting inspired by the Man command which it uses. Like in the Beginning of the Incite Terminal, I wrote a method for
 each command that stored a small manual in it in a big file called man.py, but didn't I learn from the past ? Of course, I did, so I
 quickly thought of a better idea and came to the conclusion that each command file stores it's own method for the manual. It is pretty 
-straight forwarded, just make a method called for, e.g. **show_man()** that will print all its information to the screen. **But how do I 
-call these methods when I need them ?**. I used the same principle as in incite.py. I created a man.py file in /lib that will eval other methods
+straight forwarded, just make a method called for, e.g. **[show_man()](https://github.com/lubnc4261/Incite-Terminal/blob/f24e921fd08f96e38acd886cee75c75bc9824190/lib/show.py#L70)** that will print all its information to the screen. **But how do I 
+call these methods when I need them ?**. I used the same principle as in incite.py. I created a man.py file in /lib that will [eval other methods](https://github.com/lubnc4261/Incite-Terminal/blob/f24e921fd08f96e38acd886cee75c75bc9824190/lib/man.py#L36)
 by itself by using the parameter **command name**. Since all the man functions in each script is using the <command>_man() syntax 
 the eval function is pretty simple:
 ```python
